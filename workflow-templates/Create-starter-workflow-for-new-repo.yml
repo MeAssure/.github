@@ -1,1 +1,26 @@
+name: Create Starter Workflow
+
+on:
+  repository:
+    types: [created, edited]
+
+jobs:
+  assign-starter-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Add Starter Workflow
+        run: |
+          # Copy the starter workflow into the repository
+          cp Update-issue-description.yml .github/workflows/
+          cp Update-issue-description.properties.json .github/workflows
+          
+          # Commit and push the changes
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Add starter workflow"
+          git push
 
