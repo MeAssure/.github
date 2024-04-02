@@ -1,4 +1,4 @@
 {
     "name": "Auto-Update Issue description",
-    "description": "Creates a workflow inside the repository such that any new issue created in that repository has the template in the issue added automatically."
+    "description": "Any new issue created in the repository has the template in the issue added automatically."
 }
