@@ -1,1 +1,4 @@
-
+{
+    "name": "Starter workflow for new repo",
+    "description": "Adds all the necessary workflows inside any new repository created."
+}
